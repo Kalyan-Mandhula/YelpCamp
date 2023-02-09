@@ -1,0 +1,32 @@
+
+<% layout('./BootStrap/Layout') %>
+    <div class="d-flex justify-content-center my-5">
+        <form action="/CampGrounds/<%=Obj._id%>/Edit?_method=PUT" method="POST" class="col-4">
+            <h1>Edit CampGround</h1>
+            <div class="form-group mt-3 ">
+              <label for="Title">Title</label>
+              <input value="<%=Obj.Title%>" name="camp[Title]" type="text" class="form-control mt-1" id="Title" placeholder="Enter Title" required>
+            </div>
+            <div class="form-group mt-3 ">
+              <label for="Location">Location</label>
+              <input value="<%=Obj.Location%>" name="camp[Location]" type="text" class="form-control mt-2" id="Location" placeholder="Enter Location" required>
+            </div>
+            <div class="form-group mt-3 ">
+              <label for="Image">Image</label>
+              <input value="<%=Obj.Image%>" name="camp[Image]" type="url" class="form-control mt-2" id="Image" placeholder="Enter image url" required>
+            </div>
+            <div class="form-group mt-3 ">
+              <label for="Price">Price</label>
+              <input value="<%=Obj.Price%>" name="camp[Price]" type="text" class="form-control mt-2" id="Price" placeholder="$ 0.00" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="Description">Description</label>
+              <textarea  name="camp[Description]" class="form-control mt-2" id="Description" rows="4"><%=Obj.Description%></textarea>
+            </div>
+            <div class="form-group my-3">
+              <button type="submit" class="btn btn-info">Update CampGround</button>
+            </div>
+           
+           
+          </form>
+        </div>

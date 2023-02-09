@@ -1,0 +1,42 @@
+<% layout('./BootStrap/Layout') %>
+<%- include("./Bootstrap/successFlash") %>
+<div class="d-flex justify-content-center my-1">
+<form action="/CampGrounds/login" method="POST" novalidate class="needs-validation col-md-6 col-lg-4 col-sm-8 mt-3 shadow p-3 mb-5 bg-white rounded">
+
+  <div class="mb-3 ">
+    <h5 class="text-center" >Please login to your account</h5>
+  </div>
+  <div class="mb-3 mt-1 ">
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+</div>
+
+    <div class="form-group mt-3 ">
+      <input name="username" type="text" class="form-control mt-2" id="username" placeholder="username" required>
+
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+
+    </div>
+
+    <div class="form-group mt-3 ">
+      <input name="password" type="password" class="form-control mt-2" id="password" placeholder="password" required>
+
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+
+    </div>
+    <div class="form-group my-3">
+      <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+
+    <div class="form-group mt-3 mb-5">
+        <h5>Don't have an account?<a class="text-danger text-decoration-none pe-auto" href="/CampGrounds/register"> Register</a> </h5>
+    </div>
+   
+   
+  </form>
+</div>
+
+

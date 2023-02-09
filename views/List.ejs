@@ -1,0 +1,34 @@
+
+<% layout('./BootStrap/Layout') %>
+<%- include("./Bootstrap/successFlash")%>
+
+
+
+<div class="d-flex justify-content-center my-1">
+    <div class="col-10 my-3">
+      <h2 class="text-center">All CampGrounds</h2>
+    </div>
+ </div>
+ 
+ <% for(let campground of List) { %>
+     <div class="d-flex justify-content-center my-1">
+     <div class="card col-10" mb-4>
+         <div class="row" >
+                 <img class="col-md-4 img-fluid " alt="" src="<%=campground.Image%>">
+             <div class="col-md-8">
+                 <div class="card-body">
+                     <h5 class="card-title"><%= campground.Title %> </h5>
+                     <p class="card-text">Price : &#8377; <%= campground.Price %></p>
+                     <p class="card-text">
+                         Description :
+                         <small class="text-muted" ><%= campground.Description%></small>
+                     </p>
+                     <a class="btn btn-primary" href="/CampGrounds/<%=campground._id%>/show">View <%=campground.Title%></a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+     <%}%>
+
+    

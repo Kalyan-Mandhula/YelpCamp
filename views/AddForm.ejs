@@ -1,0 +1,45 @@
+
+<% layout('./BootStrap/Layout') %>
+
+
+<div class="d-flex justify-content-center my-5">
+<form class="col-5 needs-validation " action="/CampGrounds/AddCampDetails" method="post"  novalidate >   
+    <div class="mb-3 mt-3">
+      <h3>New CampGround</h3>
+    </div>
+    
+    <div class="mb-3 mt-3 ">
+      <label for="Title" class="form-label">Title</label>
+      <input type="text" class="form-control " id="Title" name="camp[Title]" required>
+    </div>
+
+
+    <div class="mb-3 has-validation">
+      <label for="Location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="Location" name="camp[Location]" required>
+    </div>
+
+
+    <div class="mb-3 mt-3 row">
+        <label for="Price" class="form-label">Price</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="price-label">&#8377;</span>
+            <input type="number"  class="form-control" id="Price" placeholder="0.00" aria-label="price"
+                aria-describedby="price-label" name="camp[Price]" required>
+                <div class="invalid-tooltip">
+                  Please enter valid price
+                </div>
+        </div>
+       
+      </div>
+      <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="text" class="form-control" id="Image" name="camp[Image]" required>
+      </div>
+      <div class="mb-3">
+        <label for="Descrption" class="form-label">Description</label>
+        <textarea type="text" class="form-control" style="height: 100px" id="Description" name="camp[Description]" required></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
